@@ -23,3 +23,11 @@ Demo for action-build-stm32cubeide
   - Release/demo_project.elf
   - Release/demo_project.list
   
+## Artifacts
+The uploaded build artifacts can then be found here
+
+![image](https://github.com/philippdiethelm/action-build-stm32cubeide-demo/assets/97515731/cab82353-4949-4a9c-a614-a9ef26d3eec7)
+
+![image](https://github.com/philippdiethelm/action-build-stm32cubeide-demo/assets/97515731/8e628442-dd88-4bea-9aaf-17d3c44374da)
+
+![image](https://github.com/philippdiethelm/action-build-stm32cubeide-demo/assets/97515731/55575682-09fb-4a2b-8409-f4d7cf016821)
