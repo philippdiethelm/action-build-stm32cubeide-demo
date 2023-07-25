@@ -28,22 +28,14 @@ jobs:
         echo "REF_NAME is: '${{ env.REF_NAME }}'"
         echo "artifact=demo_project.${{ env.REF_NAME }}.${{ env.SHORT_SHA }}" >> "$GITHUB_ENV"
 
-    - name: Display Artifact name
-      id: display-name
-      shell: bash
-      run: |
-        echo "Artifact names are:"
-        echo "1. '${{ env.artifact }}.zip'"
-
-    - run: sudo chown 1000:docker /var/run/docker.sock
-      if: ${{ env.ACT }}
-
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
     - name: Fix git safe.directory in container
       run: mkdir -p /home/runner/work/_temp/_github_home && printf "[safe]\n\tdirectory = /github/workspace" > /home/runner/work/_temp/_github_home/.gitconfig
 
-    - uses: philippdiethelm/action-build-stm32cubeide@v9.1
+    - name: Build the project
+      uses: philippdiethelm/action-build-stm32cubeide@v9.1
       with:
         project-path: '.'
         project-target: 'demo_project'
