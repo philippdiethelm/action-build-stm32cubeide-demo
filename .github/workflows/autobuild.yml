@@ -26,7 +26,7 @@ jobs:
       run: |
         echo "Short SHA is: ${{ env.SHORT_SHA }}"
         echo "REF_NAME is: '${{ env.REF_NAME }}'"
-        echo "artifact=galloway.${{ env.REF_NAME }}.${{ env.SHORT_SHA }}" >> "$GITHUB_ENV"
+        echo "artifact=demo_project.${{ env.REF_NAME }}.${{ env.SHORT_SHA }}" >> "$GITHUB_ENV"
 
     - name: Display Artifact name
       id: display-name
